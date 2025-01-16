@@ -11,9 +11,13 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-color: grey;
     background: black;
-    z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#nametag{
+    margin-right: 75%;
 }
 
 .navbar a {
