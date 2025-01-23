@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Page Title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-          font-family: Arial, Helvetica, sans-serif;
-          margin: 0;
-        }
-        
-        /* Style the header */
-        .header {
-          padding: 80px;
-          text-align: center;
-          background: #1abc9c;
-          color: white;
-        }
-        
-        /* Increase the font size of the h1 element */
-        .header h1 {
-          font-size: 40px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>duckIt Home Page</title>
+  </head>
+
+  <body>
+    <header id="hero">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+
+          <!-- Logo -->
+          <h1 id="logo">
+            <img src="./images/duckIt.png" alt="duckIt logo">
+          </h1>
+
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="https://cs1xd3.cas.mcmaster.ca/~govindag/group_project/frontend/index.html">HOME</a></li>
+            <li><a class="nav-link" href="https://cs1xd3.cas.mcmaster.ca/~govindag/group_project/frontend/project.html">PROJECTS</a></li>
+            <li><a class="nav-link" href="https://cs1xd3.cas.mcmaster.ca/~govindag/group_project/frontend/showcase.html">SHOWCASE</a></li>
+            <li><a class="nav-link" href="https://cs1xd3.cas.mcmaster.ca/~govindag/group_project/frontend/about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main Central Page Info (logo, slogan, description) -->
+      <section class="header-container">
+        <img
+          class="profile-image"
+          src="../images/duckIt.png"
+          alt=""
+        />
         <h1>duckIt</h1>
-        <p>Don't Duck the Problem, We'll Solve it</p>
-    </div>
 
-    <img src="../images/duckIt.png" alt="duckIt logo">
+        <div class="content-text">
+          <h2>Don't duck the problem,</h2>
+          <h2>we'll solve it!</h2>
 
-</body>
+          <p>
+            A McMaster 1XD3 group composed of the members Yusuf Alam, 
+            Goshanraj Govindaraj, Gureet Kharod, and Arkel Ziko
+          </p>
+          <p></p> <p> Group #1 Lab L01</p> <p></p> <p></p>
+        </div>
+      </section>
+    </header>
+
+    <!-- footer component -->
+    <footer id="footer">
+      <div class="container">
+        <a href="https://mcmaster.simplesyllabusca.com/en-US/doc/7ole30b1f/Winter-2025-COMPSCI-1XD3-C01-SCOTTS52-Computer-Science-Practice-and-Experience:-Introduction-to-Software-Design-Using-Web-Programming?mode=view"
+        style="text-decoration:underline">1XD3 Course Syllabus</a>
+
+        <!-- Social links in the footer -->
+        <div class="social">
+          <a href="https://github.com/goshanraj-g/duckIt" target="_blank"><img src="../images/github-icon.svg" alt="GitHub" /></a>
+          <a href="https://www.eng.mcmaster.ca/programs/undergraduate-programs-degrees/computer-science-1/" target="_blank"><img src="./images/Uni_mcmaster_logo.svg" alt="Program Info" /></a>
+        </div>
+
+        <p>2025 &copy; duckIt, All rights reserved</p>
+      </div>
+    </footer>
+  </body>
 </html>
