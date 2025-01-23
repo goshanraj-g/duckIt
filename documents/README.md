@@ -4,4 +4,4 @@
 # The team site will be hosted by Goshanraj Govindaraj, whose MacId is govindag
 # The site will not be password protected, so you can access it whenever
 
-# https://cs1xd3.cas.mcmaster.ca/~govindag/group_project/
+# https://cs1xd3.cas.mcmaster.ca/~govindag/group_project/ 
