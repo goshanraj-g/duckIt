@@ -48,7 +48,6 @@ a {
     align-items: center;
     gap: 1.5rem;
 
-    
   }
   
   .navbar .nav-link {
@@ -67,7 +66,8 @@ a {
   
   .navbar #logo img {
     display: block;
-    width: 120px;
+    width: 100px;
+    height: 75px;
     position: fixed;
     top: 0;
     left: 0;
