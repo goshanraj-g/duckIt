@@ -41,18 +41,18 @@ a {
     justify-content: space-between;
     z-index: 20;
     height: 80px;
-    padding: 0.5vh;
   }
   
   .navbar .nav-menu {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    justify-content: flex-start;
+
+    
   }
   
   .navbar .nav-link {
-    margin: 0 1rem;
+    margin: 0;
     font-size: 0.8rem;
     font-weight: 600;
     background: #ffffff;
@@ -68,6 +68,11 @@ a {
   .navbar #logo img {
     display: block;
     width: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
   }
 
 #footer {
