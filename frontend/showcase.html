@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,12 +10,10 @@
 
   <body>
     <header id="hero">
-
-      <!-- Navbar -->
       <nav class="navbar">
         <div class="container">
           <h1 id="logo">
-            <img src="../images/duckIt.png" alt="duckIt logo">
+            <img src="../images/duckIt.png" alt="duckIt logo" />
           </h1>
           <ul class="nav-menu">
             <li><a class="nav-link" href="index.html">HOME</a></li>
@@ -31,190 +28,93 @@
           </div>
         </div>
       </nav>
+    </header>
 
-      <!-- Main Central Page Info (logo, slogan, description) -->
-      <section class="header-container">
+    <h1 class="page-title">Website Review</h1>
+
+    <div class="split-container">
+      <section class="split-section">
         <h1>Good Website</h1>
-
-        <img
-          class="profile-image"
-          src="../images/good-site.png"
-          alt=""
-        />
-
         <div class="content-text">
-          <a href="https://snowball-analytics.com/public/portfolios/DpaWDnMReb#common">
-              <h2><u>Snowball</u></h2>
+          <a href="https://snowball-analytics.com/public/portfolios/DpaWDnMReb" target="_blank">
+            <h2>Snowball Div Track</h2>
           </a>
-
-          <p>The Snowball Analytics demo portfolio exemplifies key user interface design principles, enhancing user experience to a high degree fulfilling the requirements of the following principles.</p>
-          <div class="lists">
-            <ol>
-              <!-- First point, Consistency-->
-              <li>
-                Consistency:
-                <ul style="list-style-type:circle">
-                  <li>
-                    Maintains uniformity across its interface, with standardized headers, footers, navigation menus, colour schemes, and fonts.
-                  </li>
-  
-                  <li>
-                    Allows users to navigate the site intuitively
-                  </li>
-                  
-                  <li>
-                    By utilizing external stylesheets, Snowball Analytics ensures that similar content sections share a cohesive look and feel, reinforcing a seamless user experience. 
-                  </li>
-                </ul>
-              </li>
-              
-              <!-- Second point, Ease of Navigation-->
-              <li>
-                Ease of Navigation:
-                <ul style="list-style-type:circle">
-                  <li>
-                    Links and navigation sections in consistent locations, enabling users to access desired information with minimal effort.
-                  </li>
-  
-                  <li>
-                    Prominent links to essential pages, such as the home or dashboard, are available on every page, facilitating quick transitions.
-                  </li>
-  
-                  <li>
-                    Effective use of the CSS Box Model and display properties creates large, easily tappable links, accommodating users navigating with various devices, including mice, trackpads, or touchscreens.
-                  </li>
-                </ul>
-              </li>
-  
-              <!-- Third point, Universal Usability-->
-              <li>
-                Universal Usability
-                <ul style="list-style-type: circle;">
-                  <li>
-                    By implementing CSS Media Queries, Snowball Analytics creates a responsive web app that adapts seamlessly to any device, ensuring a consistent experience across all devices
-                  </li>
-  
-                  <li>
-                    Additionally, the use of semantic HTML elements, such as header, footer, and article, enhances compatibility with screen readers, improving accessibility for visually impaired users.
-                  </li>
-                </ul>
-              </li>
-  
-              <!-- Fourth point, Error Prevention-->
-              <li>
-                Error Prevention
-                <ul style="list-style-type: circle;">
-                  <li>
-                    Minimizes user errors by providing clear guidance and constraints within the interface. For instance, when setting up categories and target allocations, the platform offers intuitive tools and instructions, making it less likely to make an error. 
-                  </li>
-  
-                  <li>
-                    By adhering to HTML and CSS standards, the platform ensures that browsers handle any code errors gracefully, preventing unnecessary error messages from reaching the user. 
-                  </li>
-                </ul>
-              </li>
-            </ol>
+        </div>
+        <div class="image-container">
+          <img class="profile-image" src="../images/good-site.png" alt="Good Website Example" />
+        </div>
+        
+        <div class="review-cards">
+          <div class="team">
+            <h4>✅ Consistency ✅</h4>
+            <h5>Maintains consistency by applying uniform design elements across its interface, such as standardized headers, footers, navigation menus, color schemes, and fonts. This uniformity helps users recognize patterns and predict behavior within the platform, reducing cognitive load. External stylesheets are utilized to ensure that content sections with similar purposes maintain a cohesive look and feel.</h5>
           </div>
-
-          <h1>Bad Website</h1>
-
-          <img
-            class="profile-image"
-            src="../images/bad-site.png"
-            alt=""
-          />
-
-        <div class="content-text">
-          <a href="https://www.berkshirehathaway.com">
-              <h2><u>Berkshire Hathaway</u></h2>
-          </a>
-
-          <p>
-            This section of the page presents a critical analysis of Berkshire Hatahway. Our team realised that there were several key areas where the website falls short in terms of best practices, which happens to significantly impact user experience and overall effectiveness. Violations of Design Principles Our analysis revealed several violations of fundamental design principles, including:
-          </p>
-          <div class="lists">
-            <ol>
-              <!-- First point, Consistency -->
-              <li>
-                Consistency:
-                <ul style="list-style-type:circle">
-                  <li>
-                    This website lacks between-page consistency, as there is no navigation section replicated on each page. The headers, footers, and layout choices are also not consistent on each page, making it unappealing and making navigation confusing.
-                  </li>
-                </ul>
-              </li>
-            
-              <!-- Second point, Ease of Navigation -->
-              <li>
-                Ease of Navigation:
-                <ul style="list-style-type:circle">
-                  <li>
-                    Users are not able to easily navigate the web app due to a lack of navigation tools. There are no single-click shortcuts other than links which redirect you outside of the home page of the website. There is no way to return back to the home without clicking the back arrow on the browser.
-                  </li>
-                </ul>
-              </li>
-            
-              <!-- Third point, Universal Usability -->
-              <li>
-                Universal Usability:
-                <ul style="list-style-type:circle">
-                  <li>
-                    The website exhibits significant accessibility issues. There are no images at all, and there are no CSS Media Queries, meaning that this website is poorly designed for mobile users.
-                  </li>
-                </ul>
-              </li>
-            
-              <!-- Fourth point, Visual Appeal -->
-              <li>
-                Visual Appeal:
-                <ul style="list-style-type:circle">
-                  <li>
-                    The overall design appears outdated and lacks visual appeal, which can negatively impact user engagement and brand perception.
-                  </li>
-                </ul>
-              </li>
-            
-              <!-- Fifth point, Recommendations -->
-              <li>
-                Recommendations:
-                <ul style="list-style-type:circle">
-                  <li>
-                    Revamp Layout: Create a consistent grid-based layout for better organization and improve overall visual appearance.
-                  </li>
-                  <li>
-                    Enhance Navigation: Implement a clear and intuitive navigation menu with well-defined sections and sub-sections. Also, add a search bar for better navigation.
-                  </li>
-                  <li>
-                    Regular Updates: Regularly update the website with fresh content, fix broken links, and ensure all information is accurate and up-to-date.
-                  </li>
-                  <li>
-                    Visual Appeal: Add images and more visual elements to the website to increase visual appeal.
-                  </li>
-                </ul>
-              </li>
-            </ol>
+          
+          <div class="team">
+            <h4>✅ Navigation ✅</h4>
+            <h5>Ease of navigation is achieved by placing links and navigation menus in predictable locations throughout the site. Prominent links to essential pages, like the home and dashboard, are accessible on every page to ensure quick transitions. The CSS Box Model and display properties are effectively used to create large, easily tappable links, making the site functional for all devices (touchscreens & trackpads).</h5>
+          </div>
+          
+          <div class="team">
+            <h4>✅ Usability ✅</h4>
+            <h5>Universal usability is prioritized by ensuring the platform adapts to different devices and accessibility needs. CSS Media Queries make the web app responsive, maintaining functionality and aesthetics on screens of all sizes. Semantic HTML elements like header, footer, and article enhance compatibility with assistive technologies, such as screen readers, making the site more inclusive for users of all devices.</h5>
+          </div>
+          
+          <div class="team">
+            <h4>💡 Improvement 💡</h4>
+            <h5>To enhance consistency, incorporating visual feedback like hover states or animations for interactive elements can provide additional clarity. For navigation, adding a breadcrumb trail can help users orient themselves and track their location within the site. Conducting user testing with diverse audiences can reveal remaining gaps in universal usability and identify further opportunities for refinement.</h5>
           </div>
         </div>
       </section>
-    </header>
 
-    <br><br><br><br>
+      <section class="split-section">
+        <h1>Bad Website</h1>
+        <div class="content-text">
+          <a href="https://www.berkshirehathaway.com/" target="_blank">
+            <h2>Berkshire Hathaway</h2>
+          </a>
+        </div>
+        <div class="image-container">
+          <img class="profile-image" src="../images/bad-site.png" alt="Bad Website Example" />
+        </div>
+        
+        <div class="review-cards">
+          <div class="team">
+            <h4>❌ Consistency ❌</h4>
+            <h5>The overall design of the website appears outdated, which detracts from its ability to engage users and keep interest. With minimal visual elements and no images, the site lacks the professionalism expected from a global brand like Berkshire Hathaway. The outdated appearance can negatively affect brand perception and may lead users to question the company's commitment to modern practices.</h5>
+          </div>
+          
+          <div class="team">
+            <h4>❌ Navigation ❌</h4>
+            <h5>The website struggles with providing users with an intuitive navigation experience. There are no single-click shortcuts to key sections, and users must rely on external links or browser tools to move around the site. For instance, returning to the home page requires clicking the browser's back arrow, which is both inconvenient and counterintuitive. This lack of clear navigation tools can frustrate users.</h5>
+          </div>
+          
+          <div class="team">
+            <h4>❌ Usability ❌</h4>
+            <h5>Usuability is a huge weakness here. The absence of CSS Media Queries means the site is not responsive, resulting in a poor experience for mobile users. Also, the lack of images and the limited use of semantic HTML elements hinder accessibility for users with visual impairments or those relying on assistive technologies. Addressing these issues is critical to ensure that the website meets accessibility standards.</h5>
+          </div>
+          
+          <div class="team">
+            <h4>💡 Improvement 💡</h4>
+            <h5>First, the layout should be revamped using a consistent grid-based structure to enhance organization and create a modern, cohesive appearance. Second, a clear and intuitive navigation menu should be implemented, featuring well-defined sections, sub-sections, and a search bar for better usability. Finally, adding images, graphics, and other visual elements will enhance visual appeal and engage users.</h5>
+          </div>
+        </div>
+      </section>
+    </div>
 
-    <!-- footer component -->
     <footer id="footer">
       <div class="container">
-        <a href="https://mcmaster.simplesyllabusca.com/en-US/doc/7ole30b1f/Winter-2025-COMPSCI-1XD3-C01-SCOTTS52-Computer-Science-Practice-and-Experience:-Introduction-to-Software-Design-Using-Web-Programming?mode=view"
-        style="text-decoration:underline">1XD3 Course Syllabus</a>
+        <a href="https://mcmaster.simplesyllabusca.com/en-US/doc/7ole30b1f/Winter-2025-COMPSCI-1XD3-C01-SCOTTS52-Computer-Science-Practice-and-Experience:-Introduction-to-Software-Design-Using-Web-Programming?mode=view" style="text-decoration: underline">1XD3 Course Syllabus</a>
 
-        <!-- Social links in the footer -->
         <div class="social">
-          <a href="https://github.com/goshanraj-g/duckIt" target="_blank"><img src="../images/github-icon.svg" alt="GitHub" /></a>
-          <a href="https://www.eng.mcmaster.ca/programs/undergraduate-programs-degrees/computer-science-1/" target="_blank"><img src="../images/Uni_mcmaster_logo.svg" alt="Program Info" /></a>
+          <a href="https://github.com/goshanraj-g/duckIt" target="_blank"><img src="../images/github-icon.svg" alt="GitHub"/></a>
+          <a href="https://www.eng.mcmaster.ca/programs/undergraduate-programs-degrees/computer-science-1/" target="_blank"><img src="../images/Uni_mcmaster_logo.svg" alt="Program Info"/></a>
         </div>
 
         <p>2025 &copy; duckIt, All rights reserved</p>
       </div>
     </footer>
+
     <script src="../js/script.js"></script>
   </body>
 </html>

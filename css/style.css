@@ -77,7 +77,7 @@ a {
 
 #footer {
     background: rgb(35, 184, 234);
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
