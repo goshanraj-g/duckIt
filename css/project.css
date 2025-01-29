@@ -5,7 +5,30 @@ h1 {
 }
 
 ul {
-  list-style: none;
+  list-style-type: disc;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
+}
+
+ul ul {
+  list-style-type: circle;
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+h2, h3 {
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 a {
@@ -25,44 +48,12 @@ body {
   margin: 0 auto;
   padding: 1rem 2rem;
 }
-  
+
 .header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 6rem;
-}
-  
-.header-container > div {
-  margin-top: 1rem;
-}
-  
-.content-text {
-  text-align: center;
-  margin: 1.5rem 0;
-}
-  
-.content-text h2 {
-  font-size: 3rem;
-  line-height: 1.2;
-}
-  
-.content-text p {
-  padding: 0.5rem;
   margin: 0 auto;
-  max-width: 700px;
-}
-
-#hero {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.profile-image {
-  padding-left: 1.5rem;
-  padding-top: 2rem;
-  height: 250px;
-  width: 60%;
+  max-width: 800px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  text-align: left;
 }
