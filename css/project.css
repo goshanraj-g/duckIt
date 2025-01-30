@@ -72,44 +72,44 @@ h5 {
 
 @media (max-width: 768px) {
   h1 {
-      font-size: 8vh;
+    font-size: 8vh;
   }
 
   h2 {
-      font-size: 4vh;
+    font-size: 4vh;
   }
 
   .horizontal-card {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .horizontal-image {
-      margin-right: 0;
-      margin-bottom: 1rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 
   .horizontal-content {
-      text-align: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-      font-size: 6vh;
+    font-size: 6vh;
   }
 
   h2 {
-      font-size: 3vh;
+    font-size: 3vh;
   }
 
   .horizontal-card {
-      padding: 1rem;
+    padding: 1rem;
   }
 
   .horizontal-image {
-      width: 120px;
-      height: 120px;
+    width: 120px;
+    height: 120px;
   }
 }

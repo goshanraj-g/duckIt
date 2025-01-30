@@ -34,7 +34,8 @@ body {
 .split-container {
   display: flex;
   width: 100%;
-  align-items: stretch; /* Ensure flex items stretch to the same height */
+  align-items: stretch;
+  /* Ensure flex items stretch to the same height */
   min-height: calc(100vh - 200px);
   gap: 5rem;
   padding: 0 1rem;
