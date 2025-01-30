@@ -1,59 +1,115 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
-h1 {
-    font-size: 10vh;
-}
-
-ul {
-  list-style-type: disc;
-  margin: 1.5rem 0;
-  padding-left: 2rem;
-}
-
-ul ul {
-  list-style-type: circle;
-  margin-top: 0.5rem;
-  padding-left: 1.5rem;
-}
-
-li {
-  margin-bottom: 0.75rem;
-  line-height: 1.8;
-}
-
-p {
-  margin-bottom: 1.5rem;
-  line-height: 1.8;
-}
-
-h2, h3 {
-  margin-bottom: 1rem;
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-  color: #222222;
-}
-
 body {
   background-color: #ffffff;
   color: #222222;
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  max-width: auto;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 2rem;
 }
 
-.header-container {
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 2rem;
-  background-color: #f9f9f9;
+h1 {
+  font-size: 10vh;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5.5rem;
+  color: #222222;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #222222;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.25rem;
+  color: #222222;
+  margin-bottom: 1rem;
+}
+
+.horizontal-card {
+  display: flex;
+  align-items: center;
+  background: #ffcd42;
   border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  margin-bottom: 5rem;
+}
+
+.horizontal-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 2rem;
+  border: 2px solid black;
+}
+
+.horizontal-content {
+  flex: 1;
   text-align: left;
+}
+
+.horizontal-content p {
+  font-size: 1rem;
+  color: #222222;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 8vh;
+  }
+
+  h2 {
+      font-size: 4vh;
+  }
+
+  .horizontal-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .horizontal-image {
+      margin-right: 0;
+      margin-bottom: 1rem;
+  }
+
+  .horizontal-content {
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 6vh;
+  }
+
+  h2 {
+      font-size: 3vh;
+  }
+
+  .horizontal-card {
+      padding: 1rem;
+  }
+
+  .horizontal-image {
+      width: 120px;
+      height: 120px;
+  }
 }
