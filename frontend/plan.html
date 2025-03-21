@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/project.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>duckIt Plan Page</title>
+</head>
+
+<body>
+    <header id="hero">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="container">
+                <h1 id="logo">
+                    <img class="logopic" src="../images/duckIt.png" alt="duckIt logo">
+                </h1>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="index.html">HOME</a></li>
+                    <li><a class="nav-link" href="project.html">PROJECTS</a></li>
+                    <li><a class="nav-link" href="showcase.html">SHOWCASE</a></li>
+                    <li><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li><a class="nav-link" href="plan.html">PLAN</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Projects Content -->
+        <section id="projects">
+            <div class="container">
+                <h1>Team Plan</h1>
+
+                <!-- Project Information Section -->
+                <h2>Names to Know</h2>
+                <div class="horizontal-card">
+                    <img src="../images/duckit Auto.jpg" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            • Team Name: duckIt
+                        </h5>
+                        <h5>
+                            • Members: Yusuf Alam, Goshanraj Govindaraj, Gureet Kharod, Arkel Ziko
+                        </h5>
+                        <h5>
+                            • Client: Jake Doliskani (McMaster 1DM3 Prof)
+                        </h5>
+                        <h5>
+                            • Web-App Name: FastFahr
+                        </h5>
+                        <h5>
+                            • Tech Stack: PHP, MySQL DB, React for Frontend
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Structure Section -->
+                <h2>Project Purpose</h2>
+                <div class="horizontal-card">
+                    <img src="../images/Audi_Many.jpg" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Jake Doliskani pitched a few web app ideas when we first met, but his enjoyment with cars
+                            was what resonated with us the most. He suggested building a car-trading platform like
+                            AutoTrader, but simpler. To keep it doable, we’re focusing only on German cars (BMW, Audi,
+                            etc.) and skipping payment processing.
+                            Think of it like a niche Facebook Marketplace: users can sign up, post/edit car listings,
+                            and message each other directly on the site. Buyers will have a variety of ways to filter
+                            listings by price, model, mileage, etc., then be able to chat with sellers to negotiate or
+                            arrange meetups. It is important to note that
+                            ONLY registered users will be able to post car listings, have the ability to contact
+                            sellers, and favourite/bookmark car listings; however, non-registered users will still be
+                            able to view the site with the same filtering capabilities as any other registered user.
+                            We’ve got ideas for extra features later down
+                            the line if we have time, like having ways to report a user’s account, leave reviews on a
+                            user’s profile, report issues to the team’s support email, keep track of a user’s
+                            browsing/listing history, and if possible, find a way to direct emails to a user to notify
+                            them if they received an email, or simply if
+                            they need a security code to reset their password. However, for now, we will focus on the
+                            core functionality prior to adding any features that are quality of life improvements.
+                            Ultimately, we hope this project can bring the community of German car lovers together in a
+                            safe and trusted marketplace!
+                        </h5>
+
+                    </div>
+                </div>
+
+                <!-- Project Audience Section -->
+                <h2>Data Description</h2>
+                <div class="horizontal-card">
+                    <div class="horizontal-content">
+                        <h5>
+                            Table 1: users<br>
+                            Purpose: Needed to store registered user accounts and their Info<br>
+                            Information Stored: User credentials, registration date, and basic profile data<br>
+                            • user_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • username (VARCHAR(50), UNIQUE NOT NULL)<br>
+                            • email (VARCHAR(100), UNIQUE NOT NULL)<br>
+                            • password_hash (VARCHAR(255) NOT NULL)<br>
+                            • created_at (DATETIME)<br>
+                            • profile_picture (VARCHAR(255))
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 2: car_makes<br>
+                            Purpose: Predefine allowed German car brands<br>
+                            Information Stored: Car manufacturer names<br>
+                            • make_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • make_name (VARCHAR(50), UNIQUE NOT NULL) (ex: Audi, BMW, etc)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 3: car_models<br>
+                            Purpose: Predefine allowed models for each car make<br>
+                            Information Stored: Model names tied to specific makes.<br>
+                            • model_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • make_id (INT, FOREIGN KEY REFERENCES car_makes->make_id UNIQUE NOT NULL)<br>
+                            • model_name (VARCHAR(50), UNIQUE NOT NULL) (ex: A3, Jetta, i8, etc.)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 4: car_fuels<br>
+                            Purpose: Predefine allowed fuel types for a car<br>
+                            Information Stored: Valid fuel categories for a car<br>
+                            • fuel_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • fuel_name (VARCHAR(50), UNIQUE NOT NULL) (ex: petrol, electric, diesel, hybrid)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 5: car_transmissions<br>
+                            Purpose: Predefine transmission types for a car<br>
+                            Information Stored: Valid transmission categories<br>
+                            • transmission_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • transmission_name (VARCHAR(50), UNIQUE NOT NULL) (ex: manual, automatic)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 6: listings<br>
+                            Purpose: Track car listings posted by users, also enabling search/filter functionality<br>
+                            Information Stored: Car details (make, model, price, mileage, etc) and seller info<br>
+                            • listing_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • user_id (INT, FOREIGN KEY REFERENCES users->user_id NOT NULL)<br>
+                            • model_id (INT, FOREIGN KEY REFERENCES car_models->model_id NOT NULL)<br>
+                            • fuel_id (INT, FOREIGN KEY REFERENCES car_fuels->fuel_id NOT NULL)<br>
+                            • transmission_id (INT, FOREIGN KEY REFERENCES car_transmissions->transmission_id NOT
+                            NULL)<br>
+                            • title (VARCHAR(100) NOT NULL)<br>
+                            • description (TEXT)<br>
+                            • year ((YEAR) NOT NULL)<br>
+                            • Color (VARCHAR(50) NOT NULL)<br>
+                            • price (DECIMAL(10,2) NOT NULL)<br>
+                            • mileage ((INT) NOT NULL)<br>
+                            • created_at (DATETIME)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 7: listing_images<br>
+                            Purpose: Stores multiple images for each car listing<br>
+                            Information Stored: Image file paths/URLS and their relation with listings<br>
+                            • image_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • listing_id (INT, FOREIGN KEY REFERENCES listings->listings_id, ON DELETE CASCADE, NOT
+                            NULL)<br>
+                            • image_path (VARCHAR(255) NOT NULL)<br>
+                            • uploaded_at (DATETIME)<br>
+                            • is_primary (BOOLEAN, DEFAULT 0) (note: this is a flag to decide the main listing image)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 8: messages<br>
+                            Purpose: Allows direct communication between buyers and sellers<br>
+                            Information Stored: Message content, timestamps or messages, and linked users/listings<br>
+                            • message_id (INT, PRIMARY KEY, AUTO_INCREMENT)<br>
+                            • sender_id (INT, FOREIGN KEY REFERENCES users->user_id NOT NULL)<br>
+                            • receiver_id (INT, FOREIGN KEY REFERENCES users->user_id NOT NULL)<br>
+                            • listing_id (INT, FOREIGN KEY REFERENCES listings->listings_id NOT NULL)<br>
+                            • content ((TEXT) NOT NULL)<br>
+                            • sent_at (DATETIME)<br>
+                            • is_read (BOOLEAN, DEFAULT 0)
+                        </h5>
+                        <br>
+                        <h5>
+                            Table 9: bookmarks<br>
+                            Purpose: Allows users to bookmark certain car listings for easy access to view later<br>
+                            Information Stored: Stores the user’s ID, listing ID, and timestamp of the bookmark<br>
+                            • user_id (INT, FOREIGN KEY REFERENCES users->user_id, ON DELETE CASCADE NOT NULL)<br>
+                            • listing_id (INT, FOREIGN KEY REFERENCES listings->listing_id, ON DELETE CASCADE NOT
+                            NULL)<br>
+                            • bookmarked_at (DATETIME, DEFAULT CURRENT_TIMESTAMP)<br>
+                            • COMPOSITE PRIMARY KEY (user_ud, listing_id)
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Static Information Section -->
+                <h2>Project Functions</h2>
+                <div class="horizontal-card">
+                    <div class="horizontal-content">
+                        <h5>
+                            Function 1: User Registration<br>
+                            Purpose: Allow users to create an account<br>
+                            Database Effect: INSERT user data into users table<br>
+                            Client-Side Implementation:<br>
+                            • Form with fields for username, email, and password<br>
+                            • Validation for inputs (e.g. unique email, strong password etc)<br>
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 2: User Login<br>
+                            Purpose: Allow users to log in to their already made account<br>
+                            Database Effect: SELECT from users table to authenticate/verify credentials<br>
+                            Client-Side Implementation:<br>
+                            • Form with fields for email, and password<br>
+                            • Validate login request and send to backend for authentication
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 3: Create a Listing<br>
+                            Purpose: Allow users to post a car listing<br>
+                            Database Effect: INSERT into the listings table and the listing_images table<br>
+                            Client-Side Implementation:<br>
+                            • Form with fields for car/listing details and image upload section<br>
+                            • Use dropdowns for make, model, fuel, transmission (pre populated from backend)<br>
+                            • Have some nice looking, clickable buttons to create and confirm listing
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 4: Edit a Listing<br>
+                            Purpose: Allow users to update their active car listing<br>
+                            Database Effect: UPDATE the listings table and UPDATE listing_images table<br>
+                            Client-Side Implementation:<br>
+                            • Pre-filled form with existing listing data<br>
+                            • Use dropdowns for make, model, fuel, transmission (pre populated from backend)<br>
+                            • Have some nice looking buttons once again, but different colour this time to indicate edit
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 5: Delete a Listing<br>
+                            Purpose: Allow users to delete their car listing entirely<br>
+                            Database Effect: DELETE entry from listings table + DELETE related entries of
+                            listing_images<br>
+                            Client-Side Implementation:<br>
+                            • Add a “Delete” button on the listing page → nice, big and red<br>
+                            • Show a confirmation modal before deletion
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 6: View a Listing<br>
+                            Purpose: Allow users to fully view a specific listing<br>
+                            Database Effect: SELECT from listings, car_models, car_makes, car_fuels, car_transmissions,
+                            and listing_images table<br>
+                            Client-Side Implementation:<br>
+                            • Have a button of some sort attached to the mini view of a listing, then when a button for
+                            that listing is clicked, display a full-fledged detailed view of the listing details,
+                            images, and the contact button to message the seller
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 7: Filter Listings<br>
+                            Purpose: Allow users to filter listings by make, model, price, mileage, etc.<br>
+                            Database Effect: SELECT w/ WHERE clause(s) and add pagination w/ LIMIT+OFFSET params<br>
+                            Client-Side Implementation:<br>
+                            • Add filter controls on the page like dropdowns, sliders, and checkboxes that users can
+                            play around with and adjust to their liking<br>
+                            • Update the listing display dynamically using AJAX
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 8: Send a Message<br>
+                            Purpose: Allow buyers to properly message sellers on-site<br>
+                            Database Effect: INSERT into messages table<br>
+                            Client-Side Implementation:<br>
+                            • Add a “Message Seller” button on the detailed view of the listings page<br>
+                            • Open a chat interface for writing direct messages<br>
+                            • (Just as a note, we need to find a way to establish a websocket connection between the
+                            buyer and the seller)
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 9: View Message Mailbox<br>
+                            Purpose: Allow users to view all of their messages and chat histories<br>
+                            Database Effect: SELECT from messages table<br>
+                            Client-Side Implementation:<br>
+                            • Display messages in a text message styled interface, where you can see the other person’s
+                            profile picture and username<br>
+                            • Mark messages as read when opened<br>
+                            • Increment a counter that shows how many unread messages a user currently has so that they
+                            can clearly see that they have a message
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 10: Delete Account<br>
+                            Purpose: Allow users to fully delete their account<br>
+                            Database Effect: DELETE from users table (cascades to listings, listing_images, messages
+                            table)<br>
+                            Client-Side Implementation:<br>
+                            • Add a “Delete Account” option in user settings<br>
+                            • Has a button that when clicked provides a confirmation dialog before deletion
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 11: Update Account<br>
+                            Purpose: Allow users to update their account details ie email, username, password, etc<br>
+                            Database Effect: UPDATE the users table<br>
+                            Client-Side Implementation:<br>
+                            • Add a “Update Account” option in user settings, that provides a form with fields for
+                            username, email, password, and profile picture<br>
+                            • Pre-fill the form with the user’s current details<br>
+                            • Has a button that when clicked provides a confirmation dialog before updating details
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 12: Bookmark a Listing<br>
+                            Purpose: Allows user to save listing to their bookmarks<br>
+                            Database Effect: INSERT into bookmarks<br>
+                            Client-Side Implementation:<br>
+                            • “Bookmark” button on listing pages that could be like a heart or star symbol<br>
+                            • Button toggles between “bookmarked” and “unbookmarked” states
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 13: View Bookmarks<br>
+                            Purpose: Users can view their bookmarked listings<br>
+                            Database Effect: SELECT from bookmarks, listings, and related tables<br>
+                            Client-Side Implementation:<br>
+                            • "Bookmarks" page displaying saved listings in a vertical grid/list type of format
+                        </h5>
+                        <br>
+                        <h5>
+                            Function 14: Remove a Bookmark<br>
+                            Purpose: Users can remove a listing from their bookmarks<br>
+                            Database Effect: DELETE entry from bookmarks table<br>
+                            Client-Side Implementation:<br>
+                            • “Bookmark” button on listing pages that could be like a heart or star symbol<br>
+                            • Button toggles between “bookmarked” and “unbookmarked” states<br>
+                            • When button is “unbookmarked” listing gets deleted from the database
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Design Elements Section -->
+                <h2>Role of PHP</h2>
+                <div class="horizontal-card">
+                    <img src="../images/php-icon-1024x1024-gd953j9m.png" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+
+                        <h5>
+                            PHP will be responsible for handling server-side logic, database interactions, and API
+                            endpoints. For more specific examples, refer to the ideas listed below:
+                            <br><br>
+                            CRUD Actions<br>
+                            • INSERT new listings, users, bookmarks, car images w/ their paths, etc<br>
+                            • SELECT data for displaying listings, filtering listings, etc<br>
+                            • UPDATE user details, listing details, etc<br>
+                            • DELETE listings, images, accounts, etc
+                            <br><br>
+                            User Registration/Login<br>
+                            • Hash passwords<br>
+                            • Validate user credentials against the users table<br>
+                            • Ensure only validated have access to certain features like messaging sellers
+                            <br><br>
+                            Enpoints<br>
+                            • /api/listings (GET/POST) for fetching/creating listings<br>
+                            • /api/bookmarks (GET/DELETE) for managing bookmarks<br>
+                            • /api/messages (POST) for sending messages<br>
+
+                    </div>
+                </div>
+
+                <h2>Role of JavaScript</h2>
+                <div class="horizontal-card">
+                    <img src="../images/javascriptlogo.png" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            JavaScript (React) will be responsible for the interactive elements on the client side, UI
+                            updates, and API communication. For more specific examples, refer to the ideas listed below:
+                            <br><br>
+                            Listing Creation/Edit Forms<br>
+                            • Validating inputs before submission (e.g., password strength, email regex)<br>
+                            • Auto-populate dropdowns (e.g., makes/models) by retrieving data from PHP
+                            <br><br>
+                            Filtering<br>
+                            • Updating car listings dynamically based on selected filters (e.g., price, mileage,
+                            colour)<br>
+                            • Using AJAX requests to fetch and update data without reloading the page<br>
+                            • Toggling bookmarks dynamically on the spot
+                            <br><br>
+                            API Communication<br>
+                            • Fetching data from endpoints (e.g., bookmarks, listings)<br>
+                            • Submitting data to endpoints (e.g., creating a listing)
+                            <br><br>
+                            Client-Side Routing + Design<br>
+                            • Using React for a smooth, consistent user interface<br>
+                            • Navigation between pages (e.g., /profile, /messages, etc)<br>
+                            • Hamburger Menu in the header for mobile devices<br>
+                            • Perhaps a dark mode toggle button<br>
+                        </h5>
+                    </div>
+                </div>
+
+                <h2>How PHP and JavaScript Will Work Together</h2>
+                <div class="horizontal-card">
+                    <img src="../images/design.jpg" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+
+                        <h5>
+                            In terms of how the frontend and backend will work together. Essentially what will happen
+                            is:
+                            <br><br>
+                            React (Frontend): <br>
+                            • Renders UI components<br>
+                            • Handles user interactions (clicks, form submissions) <br>
+                            • Sends HTTP requests to the endpoints
+                            <br><br>
+                            PHP (Backend) W/ MySQL Database: <br>
+                            • Process the HTTP requests<br>
+                            • Execute SQL Queries<br>
+                            • Return responses (e.g. listings, success/failure messages, etc)
+
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Member Role Yusuf -->
+                <h2>Team Member Role: Yusuf Alam</h2>
+                <div class="horizontal-card">
+                    <img src="../images/yusuf.jpeg" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Yusuf: Listings + Searching/Filtering
+                            <br><br>
+                            PHP: <br>
+                            • Listing creation/edit/delete APIs<br>
+                            • Image upload handling<br>
+                            • Search/filter logic (e.g. searching/filtering by price, mileage, etc)
+                            <br><br>
+
+                            JavaScript: <br>
+                            • Listing creation form <br>
+                            • Image upload component <br>
+                            • Search filters UI <br>
+                            • Header/Footer component consistent across all pages
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Member Role: Gosh -->
+                <h2>Team Member Role: Goshanraj Govindaraj</h2>
+                <div class="horizontal-card">
+                    <img src="../images/gosh.jpg" alt="Gosh" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Gosh: Listings + Bookmarks
+                            <br><br>
+                            PHP: <br>
+                            • Bookmark CRUD API<br>
+                            • Bookmark analytics (e.g. “This Audi A4 is bookmarked by 15 users”)<br>
+                            • Implementing pagination (e.g. only showing 10 or so listings per page)
+                            <br><br>
+                            JavaScript: <br>
+                            • Bookmark button component<br>
+                            • Bookmarks page<br>
+                            • General UI styling (CSS) + Layout design for pages<br>
+                            • Handling responsiveness of web-app on different browser sizes
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Member Role: Gureet -->
+                <h2>Team Member Role: Gureet Kharod</h2>
+                <div class="horizontal-card">
+                    <img src="../images/gureet.jpeg" alt="Gureet" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Gureet: Authentication + User Profiles
+                            <br><br>
+                            PHP: <br>
+                            • User registration/login API<br>
+                            • Profile CRUD operations<br>
+                            • Session management<br>
+                            • Some type of password reset logic
+                            <br><br>
+                            JavaScript: <br>
+                            • Login/register forms<br>
+                            • Profile editing UI<br>
+                            • Some type of password reset flow
+                        </h5>
+                    </div>
+                </div>
+
+                <!-- Project Member Role: Arkel -->
+                <h2>Team Member Role: Arkel Ziko</h2>
+                <div class="horizontal-card">
+                    <img src="../images/arkel.png" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Arkel: Messaging + Notifications
+                            <br><br>
+                            PHP: <br>
+                            • Message storage/retrieval API<br>
+                            • Real-time messaging & detection for when messages are read (WebSocket)<br>
+                            • Notification/Alert System of some sort
+                            <br><br>
+                            JavaScript: <br>
+                            • Chat UI<br>
+                            • Message notification symbol/design<br>
+                            • Inbox UI<br>
+                            • Helping Gosh with layout designs by designing buttons
+                        </h5>
+                    </div>
+                </div>
+
+                <h2>First Increment</h2>
+                <div class="horizontal-card">
+                    <img src="../images/interact.png" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Target Date: Thursday, April 3rd<br>
+                            Goal: To have the full working skeleton of the app implemented to a reasonable extent so
+                            that for future increments,
+                            we can work on optimizing the web-app, fixing bugs, and adding new features. <br><br>
+                            This is what we hope to have done by the first increment:
+                            <br>
+                            • User Authentication: Users can register, log in, and view their profile<br>
+                            • Listing Creation: Usesr can create listings with images<br>
+                            • Public Browsing: Listings are displayed on the homepage with pagination and basic
+                            search<br>
+                            • Messaging: Chat UI is fully made and some form of messaging between users is
+                            implemented<br>
+                        </h5>
+                    </div>
+                </div>
+
+                <h2>Contributions for First Increment</h2>
+                <div class="horizontal-card">
+                    <img src="../images/Teamwork-clipart-2.jpg" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            Yusuf Alam: <br>
+                            • PHP: Let users create listings with basic details and allow users to upload images for
+                            listings<br>
+                            • React: Listing creation form, image upload component, and header/footer component
+                            <br><br>
+
+                            Goshanraj Govindaraj: <br>
+                            • PHP: Fetch listings for the homepage with basic filtering and implement pagination<br>
+                            • React: Listing grid + basic UI styling/layout for all pages
+                            <br><br>
+
+                            Gureet Kharod: <br>
+                            • PHP: User registration/login API<br>
+                            • React: Login/register forms + UI for profile page
+                            <br><br>
+
+                            Arkel Ziko: <br>
+                            • PHP: Have messages stored in database and allow users to send/receive messagess<br>
+                            • React: Chat UI + notification badge
+                        </h5>
+
+                    </div>
+                </div>
+
+                <h2>Client Feedback:</h2>
+                <div class="horizontal-card">
+                    <img src="../images/jake.jpeg" alt="Arkel Ziko" class="horizontal-image">
+                    <div class="horizontal-content">
+                        <h5>
+                            During our discussion, Jake Doliskani was a fan of the German car trading web-app idea,
+                            calling it an “achievable idea” but advising that we focus on “simplicity and functionality”
+                            before adding extra features. For the frontend, he emphasized a “clean and responsive”
+                            design similar to Autotrader as an example: “As you can see, the main page [for Autotrader]
+                            doesn’t overwhelm the user aside from the weird feedback box... It is also extremely easy to
+                            navigate, which should be the same for your guys’ web-app.” We agreed and will prioritize
+                            straightforward user experience, and we will be using React JS to help promote consistency
+                            on the frontend and more clean, readable code with our development process through reusable
+                            components.
+                            <br> <br>
+                            Regarding the backend, Jake recommended that we “Go into this project with the mindset that
+                            this is going to be a large-scale web-app... keep the code as optimal as possible because no
+                            user likes a slow web-app.” He also stressed documentation: “Always write documentation...
+                            everyone needs to be on the same track.” To take his advice into consideration, we will try
+                            our best to optimize performance within our code base by implementing pagination and DTOs.
+                            We will also try to learn about and implement caching if we have time. When it comes to
+                            documentation we will definitely apply the habit of having documentation for our functions
+                            and classes so that all team members can easily understand each other's code.
+                        </h5>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <a href="https://mcmaster.simplesyllabusca.com/en-US/doc/7ole30b1f/Winter-2025-COMPSCI-1XD3-C01-SCOTTS52-Computer-Science-Practice-and-Experience:-Introduction-to-Software-Design-Using-Web-Programming?mode=view"
+                    style="text-decoration:underline">1XD3 Course Syllabus</a>
+
+                <div class="social">
+                    <a href="https://github.com/goshanraj-g/duckIt" target="_blank"><img src="../images/github-icon.svg"
+                            alt="GitHub" /></a>
+                    <a href="https://www.eng.mcmaster.ca/programs/undergraduate-programs-degrees/computer-science-1/"
+                        target="_blank"><img src="../images/Uni_mcmaster_logo.svg" alt="Program Info" /></a>
+                </div>
+
+                <p>2025 &copy; duckIt, All rights reserved</p>
+            </div>
+        </footer>
+
+        <script src="../js/script.js"></script>
+</body>
+
+</html>

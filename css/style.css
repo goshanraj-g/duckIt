@@ -137,7 +137,7 @@ a {
 }
 
 /* Media Queries */
-@media (max-width: 787px) {
+@media (max-width: 850px) {
   .header-container {
     margin-top: 7rem;
     text-align: center;
